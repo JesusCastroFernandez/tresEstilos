@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class EntrenamientoNadador {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Pedimos al usuario la cantidad de largos y la longitud de la piscina
+        System.out.print("Introduce la cantidad de largos recorridos: ");
+        int largos = sc.nextInt();
+        System.out.print("Introduce la longitud de la piscina (en metros): ");
+        double longitudPiscina = sc.nextDouble();
+
+        // Calculamos los metros recorridos en cada estilo
+        double metrosCrol = largos * longitudPiscina * 2;
+        double metrosEspalda = largos * longitudPiscina * 2;
+        double metrosBraza = largos * longitudPiscina * 2;
+
+        // Mostramos los resultados en metros y kilómetros
+        System.out.println("Metros recorridos en estilo crol: " + metrosCrol + " metros");
+        System.out.println("Metros recorridos en estilo espalda: " + metrosEspalda + " metros");
+        System.out.println("Metros recorridos en estilo braza: " + metrosBraza + " metros");
+        double distanciaTotal = metrosCrol + metrosEspalda + metrosBraza;
+        System.out.println("Distancia total recorrida: " + distanciaTotal / 1000 + " kilómetros");
+
+        sc.close();
+    }
+}
